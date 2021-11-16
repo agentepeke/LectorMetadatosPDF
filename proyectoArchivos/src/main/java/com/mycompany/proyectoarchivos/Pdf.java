@@ -10,7 +10,7 @@ package com.mycompany.proyectoarchivos;
  * @author Peke
  */
 public class Pdf {
-    private byte id; 
+    private String ruta; 
     private String TamArchivo;
     private String TamPaginas;
     private String NoPaginas;
@@ -22,29 +22,31 @@ public class Pdf {
     private String App;
     private String Imagenes;
     private String Fuentes;
+    private Pdf siguiente;
     
     
-    public Pdf(String TamArchivo, String TamPaginas ,String NoPaginas,String Titulo, String Asunto, String PClave, String Tipo, String Version, String App, String Imagenes, String Fuentes){
-        this.TamArchivo = TamArchivo;
-        this.TamPaginas = TamPaginas;
-        this.NoPaginas = NoPaginas;
-        this.Titulo = Titulo;
-        this.Asunto = Asunto;;
-        this.PClave = PClave;
-        this.Tipo = Tipo;
-        this.Version = Version;
-        this.App = App;
-        this.Imagenes = Imagenes;
-        this.Fuentes = Fuentes;
-
+    public Pdf(){
+        this.ruta = null;
+        this.TamArchivo = null;
+        this.TamPaginas = null;
+        this.NoPaginas = null;
+        this.Titulo = null;
+        this.Asunto = null;;
+        this.PClave = null;
+        this.Tipo = null;
+        this.Version = null;
+        this.App = null;
+        this.Imagenes = null;
+        this.Fuentes = null;
+        this.siguiente = null;
     }
 
-    public byte getId() {
-        return id;
+    public String getRuta() {
+        return ruta;
     }
 
-    public void setId(byte id) {
-        this.id = id;
+    public void setRuta(String ruta) {
+        this.ruta = ruta;
     }
 
     public String getTamArchivo() {
@@ -135,6 +137,13 @@ public class Pdf {
         this.Fuentes = Fuentes;
     }
     
+    public Pdf getSiguiente() {
+        return siguiente;
+    }
+
+    public void setSiguiente(Pdf siguiente) {
+        this.siguiente = siguiente;
+    }   
     
     
 }
